@@ -1,0 +1,8 @@
+#set($params = {})
+$util.qr($params.put("id", $ctx.args.id))
+
+{
+  "version" : "2017-02-28",
+  "operation" : "Invoke",
+  "payload": $util.toJson($params)
+}
