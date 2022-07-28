@@ -1,8 +1,8 @@
 overwrite: true
 
 schema:
-  - appsync/schema.graphql # seu schema graphql
-  - appsync/scalars.graphql
+  - src/appsync/schema.graphql
+  - src/appsync/scalars.graphql
 
 generates:
   appsync.d.ts:

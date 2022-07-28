@@ -54,6 +54,21 @@ Resources:
               Service:
                 - appsync.amazonaws.com
 
+  LambdaAccessPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: lambda-access
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'lambda:invokeFunction'
+            Resource:
+              - !GetAtt GetVehiclesLambda.Arn
+      Roles:
+        - Ref: AWSAppSyncServiceRole
+
   TypescriptAPI:
     Type: AWS::AppSync::GraphQLApi
     Properties:
