@@ -14,7 +14,7 @@ export const handler = async (event: AppSyncResolverEvent<QueryGetVehiclesArgs, 
   {
     id: '2',
     category: 'motorcycle',
-    seats: 1,
+    seats: 2,
     publishedAt: '1658444723'
   },
   {
@@ -26,7 +26,7 @@ export const handler = async (event: AppSyncResolverEvent<QueryGetVehiclesArgs, 
 
   const vehicle = vehicles.find((vehicle: Vehicle) => vehicle.id === event.arguments.id);
   if (vehicle) {
-    return vehicle;
+    return vehicle
   }
-  throw new Error('Not Found');
+  throw new Error('Sorry. Vehicle not found!')
 };

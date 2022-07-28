@@ -6,5 +6,5 @@ type Vehicle {
   id: String!
   category: String!
   seats: Int!
-  publishedAt: AWSDateTime
+  publishedAt: String!
 }

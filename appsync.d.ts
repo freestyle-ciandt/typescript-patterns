@@ -35,6 +35,6 @@ export type Vehicle = {
   __typename?: 'Vehicle';
   category: Scalars['String'];
   id: Scalars['String'];
-  publishedAt?: Maybe<Scalars['AWSDateTime']>;
+  publishedAt: Scalars['String'];
   seats: Scalars['Int'];
 };
