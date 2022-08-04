@@ -11,7 +11,7 @@ Please follow the steps below:
     - Prefer to use the `.js` extension, as it makes the file more dynamic to configure.
     - The configuration must extend the AirBNB.
     - Add the Import plugin to the configuration.
-3. Define specific rules:
+3. Overwrite specific rules:
     * Do not allow a function parameter to get reassigned. For example:
     ```javascript
     // Do not allow this
@@ -47,6 +47,11 @@ Please follow the steps below:
     do {
         // some logic...
     } while ((node = list.nextNode))
+    ```
+    * Allow developers to use the "plus-plus" syntax. Example:
+    ```javascript
+    let a = 0;
+    a++;
     ```
 
 4. Create a script named **lint** and another one named **lint:fix** in the `package.json` file.
