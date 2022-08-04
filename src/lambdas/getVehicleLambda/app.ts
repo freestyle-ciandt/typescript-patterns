@@ -28,7 +28,7 @@ const PROMOTIONAL_VEHICLE_ID = '4';
 const PROMOTIONAL_VEHICLE: Vehicle = {
     id: PROMOTIONAL_VEHICLE_ID,
     category: `spaceship`,
-    seats: 4,
+    seats: 20,
     publishedAt: 1659646128,
     available: true,
 }
