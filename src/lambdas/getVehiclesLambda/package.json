@@ -1,5 +1,5 @@
 {
-  "name": "get-vehicles-lambda",
+  "name": "get-vehicle-lambda",
   "version": "1.0.0",
   "description": "This lambda is just an example of a query resolver on AppSync",
   "license": "MIT",

@@ -23,11 +23,11 @@ The repository was initially configured with the following structure:
 
 * `template.yaml`: The SAM template file with all resources from your application.
 * `src/appsync`: This directory contains the files used by the AppSync API.
-* `src/lambdas`: This directory can be used to store the files of the lambdas. There's already a lambda named `getVehiclesLambda` as an example.
+* `src/lambdas`: This directory can be used to store the files of the lambdas. There's already a lambda named `getVehicleLambda` as an example.
 * `src/tasks`: The documentation that will be used to guide the DOJO tasks.
 * `appsync.d.ts`: This file defines the types to be used by your application based on your schema definition.
 
-This project contains a working example of AppSync with a query named `getVehicles` that gets resolved by a Lambda with Typescript and NodeJS 16x.
+This project contains a working example of AppSync with a query named `getVehicle` that gets resolved by a Lambda with Typescript and NodeJS 16x.
 
 After deploying the stack, you'll be able to see the API working, as shown in the image below:
 

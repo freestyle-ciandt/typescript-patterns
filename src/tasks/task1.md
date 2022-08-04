@@ -1,4 +1,4 @@
-# TASK 1: Configure ESLint (WIP...)
+# TASK 1: Configure ESLint
 
 This task was designed to make you more familiar with configuring Lint rules for a new project.
 

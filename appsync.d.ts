@@ -14,18 +14,19 @@ export type Scalars = {
 
 export type Query = {
   __typename?: 'Query';
-  getVehicles?: Maybe<Vehicle>;
+  getVehicle?: Maybe<Vehicle>;
 };
 
 
-export type QueryGetVehiclesArgs = {
+export type QueryGetVehicleArgs = {
   id: Scalars['String'];
 };
 
 export type Vehicle = {
   __typename?: 'Vehicle';
+  available: Scalars['Boolean'];
   category: Scalars['String'];
   id: Scalars['String'];
-  publishedAt: Scalars['String'];
+  publishedAt: Scalars['Int'];
   seats: Scalars['Int'];
 };

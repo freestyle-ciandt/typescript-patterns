@@ -1,4 +1,4 @@
-# TASK 2: Configure Jest (WIP)
+# TASK 2: Configure Jest
 
 In this task you'll become more experienced in configuring a code quality mechanism using the Jest framework.
 
@@ -16,7 +16,7 @@ Please follow the steps below:
 3. Add a new script named **test** and another one named **test:watch**.
     - The **test** script should execute all the tests.
     - The **test:watch** script should execute the tests only for the modified files. It will listen for updates and execute the tests automatically.
-4. Create unit tests for the **getVehiclesLambda**. Make sure you explore all the possible scenarios.
+4. Create unit tests for the **getVehicleLambda**. Make sure you explore all the possible scenarios.
 
 
 ---

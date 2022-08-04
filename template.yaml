@@ -11,10 +11,10 @@ Globals:
       - arm64
 
 Resources:
-  GetVehiclesLambda:
+  GetVehicleLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/lambdas/getVehiclesLambda
+      CodeUri: src/lambdas/getVehicleLambda
       Handler: app.handler
     Metadata:
       BuildMethod: esbuild
@@ -65,7 +65,7 @@ Resources:
             Action:
               - 'lambda:invokeFunction'
             Resource:
-              - !GetAtt GetVehiclesLambda.Arn
+              - !GetAtt GetVehicleLambda.Arn
       Roles:
         - Ref: AWSAppSyncServiceRole
 
@@ -94,25 +94,25 @@ Resources:
       ApiId: !GetAtt TypescriptAPI.ApiId
       DefinitionS3Location: ./src/appsync/schema.graphql
 
-  GetVehiclesLambdaDataSource:
+  GetVehicleLambdaDataSource:
     Type: AWS::AppSync::DataSource
     Properties:
       ApiId: !GetAtt TypescriptAPI.ApiId
-      Name: GetVehiclesLambda
+      Name: GetVehicleLambda
       Type: AWS_LAMBDA
       ServiceRoleArn: !GetAtt AWSAppSyncServiceRole.Arn
       LambdaConfig:
-        LambdaFunctionArn: !GetAtt GetVehiclesLambda.Arn
+        LambdaFunctionArn: !GetAtt GetVehicleLambda.Arn
 
-  GetVehiclesResolver:
+  GetVehicleResolver:
     Type: AWS::AppSync::Resolver
     Properties:
       ApiId: !GetAtt TypescriptAPI.ApiId
       TypeName: Query
-      FieldName: getVehicles
-      DataSourceName: !GetAtt GetVehiclesLambdaDataSource.Name
-      RequestMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicles.req.vtl
-      ResponseMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicles.res.vtl
+      FieldName: getVehicle
+      DataSourceName: !GetAtt GetVehicleLambdaDataSource.Name
+      RequestMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicle.req.vtl
+      ResponseMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicle.res.vtl
     DependsOn: TypescriptAPISchema
 
 Outputs:

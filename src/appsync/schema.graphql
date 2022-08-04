@@ -1,10 +1,11 @@
 type Query {
-  getVehicles(id: String!): Vehicle
+  getVehicle(id: String!): Vehicle
 }
 
 type Vehicle {
   id: String!
   category: String!
   seats: Int!
-  publishedAt: String!
+  publishedAt: Int!
+  available: Boolean!
 }
