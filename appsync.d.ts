@@ -10,15 +10,6 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  AWSDate: string;
-  AWSDateTime: string;
-  AWSEmail: string;
-  AWSIPAddress: string;
-  AWSJSON: string;
-  AWSPhone: string;
-  AWSTime: string;
-  AWSTimestamp: number;
-  AWSURL: string;
 };
 
 export type Query = {

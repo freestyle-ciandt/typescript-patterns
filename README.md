@@ -6,8 +6,8 @@ This repository contains a basic structure to learn good practices of Typescript
 
 In order to follow the challenges from this repository, you need to make sure you have:
 
-* [NodeJS](https://nodejs.org/en/) (version 14x).
-* [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html).
+* [NodeJS 16x](https://nodejs.org/en/).
+* [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html). (Make sure you are using the latest version that supports the NodeJS 16x runtime.)
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 * Access to the CI&T Freestyle AWS account.
 
@@ -27,7 +27,7 @@ The repository was initially configured with the following structure:
 * `src/tasks`: The documentation that will be used to guide the DOJO tasks.
 * `appsync.d.ts`: This file defines the types to be used by your application based on your schema definition.
 
-This project contains a working example of AppSync with a query named `getVehicles` that gets resolved by a Lambda with Typescript and NodeJS 14x.
+This project contains a working example of AppSync with a query named `getVehicles` that gets resolved by a Lambda with Typescript and NodeJS 16x.
 
 After deploying the stack, you'll be able to see the API working, as shown in the image below:
 

@@ -1,9 +1,8 @@
 import { AppSyncResolverEvent } from 'aws-lambda';
-import { Vehicle, QueryGetVehiclesArgs } from '../../appsync';
+import { Vehicle, QueryGetVehiclesArgs } from '../../../appsync';
 
 export const handler = async (event: AppSyncResolverEvent<QueryGetVehiclesArgs, Vehicle>): Promise<Vehicle> => {
   console.log(JSON.stringify(event));
-
   const vehicles: Vehicle[] = [
     {
     id: '1',
