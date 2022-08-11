@@ -9,7 +9,6 @@ In order to follow the challenges from this repository, you need to make sure yo
 * [NodeJS 16x](https://nodejs.org/en/).
 * [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html). (Make sure you are using the latest version that supports the NodeJS 16x runtime.)
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-* Access to the CI&T Freestyle AWS account.
 
 Also, make sure you install the dependencies of the project before start developing:
 
