@@ -1,4 +1,4 @@
-# TASK 3: Configure the Pipeline
+# TASK 3: Configure the Pipeline (CI/CD)
 
 WIP...
 

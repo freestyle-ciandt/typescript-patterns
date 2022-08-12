@@ -57,6 +57,7 @@ Please follow the steps below:
 4. Create a script named **lint** and another one named **lint:fix** in the `package.json` file.
     - The **lint** script will execute the ESLint validation and report the issues found.
     - The **lint:fix** script will execute the ESLint validation, report the issues found and it will fix the issues in the code for you.
+5. Adjust the code of the `getVehicleLambda` to meet the Lint rules.
 
 ---
 
