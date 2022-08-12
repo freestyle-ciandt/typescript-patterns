@@ -1,0 +1,11 @@
+type Query {
+  getVehicle(id: String!): Vehicle
+}
+
+type Vehicle {
+  id: String!
+  category: String!
+  seats: Int!
+  publishedAt: Int!
+  available: Boolean!
+}

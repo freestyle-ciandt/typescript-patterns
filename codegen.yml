@@ -1,0 +1,9 @@
+overwrite: true
+
+schema:
+  - src/appsync/schema.graphql
+
+generates:
+  appsync.d.ts:
+    plugins:
+      - typescript
