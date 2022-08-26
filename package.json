@@ -5,10 +5,22 @@
   "devDependencies": {
     "@graphql-codegen/cli": "^2.9.1",
     "@graphql-codegen/typescript": "^2.7.2",
-    "graphql": "^16.5.0"
+    "eslint-import-resolver-typescript": "^3.4.2",
+    "graphql": "^16.5.0",
+    "typescript": "^4.7.4"
   },
   "scripts": {
-    "generate-schema": "graphql-codegen"
+    "generate-schema": "graphql-codegen",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }
