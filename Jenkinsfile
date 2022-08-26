@@ -19,10 +19,13 @@ pipeline {
         stash includes: '**/.aws-sam/**/*', name: 'aws-sam'
       }
     }
-    stage('beta') {
+    stage('DEV Deployment') {
       environment {
         STACK_NAME = 'sam-testing-jenkins'
         S3_BUCKET = 'typescript-patterns-dojo-assets'
+      }
+      input{
+        message "Do you want to proceed?"
       }
       steps {
         withAWS(credentials: 'sam-dojo-access-credentials', region: 'us-east-1') {
