@@ -24,7 +24,10 @@ const REGULAR_VEHICLES: Vehicle[] = [
   available: true,
 }];
 const obj = { a: 1, b: 2, c: 3 };
-const obj2 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+const obj2 = { 
+  a: 1, 
+  b: 2, c: 3, d: 4, e: 5 
+};
 
 const PROMOTIONAL_VEHICLE_ID = '4';
 const PROMOTIONAL_VEHICLE: Vehicle = {
