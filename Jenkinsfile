@@ -11,7 +11,7 @@ pipeline {
     stage('Build') {
       steps {
         unstash 'venv'
-        sh 'venv/bin/sam build'
+        sh 'venv/bin/sam build --beta-features'
         stash includes: '**/.aws-sam/**/*', name: 'aws-sam'
       }
     }
