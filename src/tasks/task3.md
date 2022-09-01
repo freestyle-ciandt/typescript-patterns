@@ -1,6 +1,13 @@
 # TASK 3: Configure the Pipeline (CI/CD)
 
-In this task you will practice your skills with CI/CD. Please follow the instructions below:
+In this task you will practice your skills with CI/CD.
+
+If you want to deep dive in the concepts of Continuous Integration and Continuous Delivery, here are some interesting links about the subject:
+* [**Software Delivery Guide - Martin Fowler**](https://martinfowler.com/delivery.html)
+* [**Continuous Integration - Martin Fowler**](https://www.martinfowler.com/articles/continuousIntegration.html)
+* [**Continuous Delivery - Martin Fowler**](https://martinfowler.com/bliki/ContinuousDelivery.html)
+
+In order to proceed with the tasks, please follow the instructions below:
 
 1. Create a script in the `package.json` named `quality`. This script will perform the following:
     * Check for audit issues.
