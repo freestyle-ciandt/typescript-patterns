@@ -1,5 +1,5 @@
-import { AppSyncResolverEvent } from 'aws-lambda';
-import { Vehicle, QueryGetVehicleArgs } from "../../../appsync";
+import {AppSyncResolverEvent} from 'aws-lambda';
+import {Vehicle, QueryGetVehicleArgs} from "../../../appsync";
 
 const REGULAR_VEHICLES: Vehicle[] = [
     {
@@ -23,11 +23,12 @@ const REGULAR_VEHICLES: Vehicle[] = [
   publishedAt: 1658456533,
   available: true,
 }];
-const obj = { a: 1, b: 2, c: 3 };
-const obj2 = { 
-  a: 1, 
-  b: 2, c: 3, d: 4, e: 5 
+const obj = {a: 1, b: 2, c: 3};
+const obj2 = {
+  a: 1, b: 2, c: 3, d: 4, e: 5
 };
+
+const testReassing = (id: string) => id = '10';
 
 const PROMOTIONAL_VEHICLE_ID = '4';
 const PROMOTIONAL_VEHICLE: Vehicle = {
@@ -55,7 +56,7 @@ const getRegularVehicle = (id: string): Vehicle | null => {
 export const handler = async (event: AppSyncResolverEvent<QueryGetVehicleArgs, Vehicle>): Promise<Vehicle> => {
   console.log(JSON.stringify(event));
 
-  const { id } = event.arguments;
+  const {id} = event.arguments;
 
   if (isPromotionalVehicle(id)) {
     const vehicle = getPromotionalVehicle();
