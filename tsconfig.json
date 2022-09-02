@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
     "target": "es2020",
     "strict": true,
     "preserveConstEnums": true,
-    "noEmit": true,
     "sourceMap": false,
     "module":"es2015",
     "moduleResolution":"node",
@@ -11,5 +11,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,  
   },
+  "include": ["src", "./test.ts"],
   "exclude": ["node_modules"]
 }
