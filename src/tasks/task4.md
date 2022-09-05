@@ -19,10 +19,10 @@ Your job is to implement this API in a way that is easier to scale in case we ne
 
 Please follow the instructions below:
 
-* The API should provide a mutation named `forwardMessage`. This mutation will receive the following attributes:
+1. The API should provide a mutation named `forwardMessage`. This mutation will receive the following attributes:
     * `route`: The route where the message will be forwarded to. The valid routes are: `LAMBDA`, `DYNAMODB`, `SQS` or `S3`.
     * `message`: It will be a string containing a simple message.
-* For all routes, the API will generate a random **uuid** as well as a **lastUpdated** with the current timestamp. The final payload to be forwarded should look like this:
+2. For all routes, the API will generate a random **uuid** as well as a **lastUpdated** with the current timestamp. The final payload to be forwarded should look like this:
 ```json
 {
   "id": "4aaff49c-521a-483a-b0c3-79418d35cf2f",
@@ -30,24 +30,40 @@ Please follow the instructions below:
   "message": "Hi. This is just an example of message."
 }
 ```
-* If received an invalid route, the API should return status code `400` and the following payload in the response body:
+3. AVOID using `if` or `switch` statements. Figure out a way to use the pattern without that.
+4. If received an invalid route, the API should return status code `400` and the following payload in the response body:
 ```json
 {
   "result": "Invalid route."
 }
 ```
-* If everything went well, the API should return status code `200` and the following payload in the  response body:
+5. If everything went well, the API should return status code `200` and the following payload in the  response body:
 ```json
 {
   "result": "Forwarded successfully."
 }
 ```
-* If something goes wrong, the API should return status code `500` and the following payload in the  response body:
+6. If something goes wrong, the API should return status code `500` and the following payload in the  response body:
 ```json
 {
   "result": "Something went wrong."
 }
 ```
+
+**Note:** Remember to create unit tests for every possible scenario.
+
+## Testing
+
+You can use the command below to test if your mutation is working as expected:
+
+```bash
+curl --location --request POST 'https://YOUR_API_URL.appsync-api.us-east-1.amazonaws.com/graphql' \
+--header 'x-api-key: YOUR_API_KEY' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"mutation forwardMessage($route: String!, $message: String!) {\n    forwardMessage(route: $route, message: $message) {\n        message\n    }\n}","variables":{"route":"LAMBDA","message":"A simple forwarder example."}}'
+```
+
+Make sure you replace **YOUR_API_URL** with the URL of your API and **YOUR_API_KEY** with the *x-api-key* of your API. Also, feel free to try out with different routes.
 
 
 [<- Go back](../../README.md)
