@@ -11,6 +11,7 @@ In this task you'll have the opportunity to apply the design pattern called Fact
 You are working in a project where a machine is constantly pushing messages to an API in the Cloud. The messages need to take different routes depending on the purpose of the message.
 
 This is how the architecture should look like:
+
 ![Forward Message API structure](./docs/task4.png "Forward Message API structure")
 
 Your job is to implement this API in a way that is easier to scale in case we need to add more types of routes to the messages.
