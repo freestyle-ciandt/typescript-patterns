@@ -19,15 +19,10 @@ Please follow the steps below:
         myParam = 'another value';
     }
     ```
-    * If an object has more than 3 attributes, make it required to break line. Examples:
+    * If an object has more than 3 attributes, it should be broken in a new line. The object indentation must be consistent. Here are a few examples:
     ```javascript
-    // This one is fine
+    // OK
     const obj = { a: 1, b: 2, c: 3 };
-
-    // This one is incorrect
-    const obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
-
-    // Expected
     const obj = {
         a: 1,
         b: 2,
@@ -35,6 +30,15 @@ Please follow the steps below:
         d: 4,
         e: 5,
     };
+    const obj = {
+        a: 1, b: 2, c: 3, d: 4, e: 5
+    };
+
+    // NOT OK
+    const obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+    const obj = { a: 1,
+        b: 2, c: 3,
+        d: 4, e: 5 };
     ```
     * If the developer made an assignment inside a condition, allow it only if the expression is surrounded by parenthesis. Example:
     ```javascript
