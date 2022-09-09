@@ -69,3 +69,7 @@ Here is the list of tasks to be developed in this repository:
 * **TASK 4:** [Implement the Factory Pattern](./src/tasks/task4.md)
 * **TASK 5:** [Implement the Builder Pattern](./src/tasks/task5.md)
 
+
+
+02-09 -> Seguimos com a configuração do EsLint e ainda ficou pra resolver o questão do `object-property-newline`. [piloto: Rômnulo]
+09-09 -> Terminamos a configuração do EsLint. [piloto: Rômulo]

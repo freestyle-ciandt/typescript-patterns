@@ -24,20 +24,17 @@
   "rules": {
     "no-param-reassign": "error",
     "no-plusplus": "off",
+    "no-cond-assign": ["error", "except-parens"],
     "indent": [
       "error",
       2
     ],
-    "object-property-newline": [
-      "error",
-      {
-        "allowAllPropertiesOnSameLine": false
-      }
-    ],
     "object-curly-newline": [
       "error",
       {
-        "minProperties": 4
+        "multiline": true,
+        "minProperties": 4,
+        "consistent": true
       }
     ]
   }
