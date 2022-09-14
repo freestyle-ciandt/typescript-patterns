@@ -2,6 +2,10 @@
 
 In this task you'll be able to apply the Builder design pattern.
 
+## References
+
+- [**Refactoring Guru - Builder**](https://refactoring.guru/design-patterns/builder)
+
 ## Context
 
 You work as a software developer in a burger restaurant. The restaurant offers only some types of burgers. Your manager decided to offer users a possibility to register their favorite burger in the system. The favorite burger can be a predefined recipe or a custom recipe.
