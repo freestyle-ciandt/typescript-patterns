@@ -127,6 +127,8 @@ You work as a software developer in a burger restaurant. The restaurant offers o
           ]
         }
       ```
+
+      **Note 1:** Feel free to mix up the attributes, add new ones, make some of them optional, and so on. The idea is to create as many variations as possible in the input data.
     * Once the data is saved in the database successfully, the API should return status code `200` and the following payload in the response body:
 
       ```json
@@ -143,6 +145,7 @@ You work as a software developer in a burger restaurant. The restaurant offers o
       ```
 3. Do NOT create child classes for each burger variation.
 4. Do NOT add parameters in the constructor of the burger/ingredient classes.
+5. Feel free to create as many builders/directors as you need.
 
 
 [<- Go back](../../README.md)
