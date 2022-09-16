@@ -11,6 +11,17 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        paths: './tsconfig.json',
+      },
+    },
+  },
   rules: {
     "no-cond-assign": ["error", "except-parens"],
     "no-plusplus": "off"
