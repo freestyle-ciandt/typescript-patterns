@@ -11,5 +11,8 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  rules: {},
+  rules: {
+    "no-cond-assign": ["error", "except-parens"],
+    "no-plusplus": "off"
+  },
 };
