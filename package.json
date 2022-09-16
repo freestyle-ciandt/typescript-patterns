@@ -5,14 +5,19 @@
   "devDependencies": {
     "@graphql-codegen/cli": "^2.9.1",
     "@graphql-codegen/typescript": "^2.7.2",
+    "@types/jest": "^29.0.3",
     "eslint-import-resolver-typescript": "^3.4.2",
     "graphql": "^16.5.0",
+    "jest": "^29.0.3",
+    "ts-jest": "^29.0.1",
     "typescript": "^4.7.4"
   },
   "scripts": {
     "generate-schema": "graphql-codegen",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "license": "MIT",
   "dependencies": {
