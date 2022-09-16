@@ -12,7 +12,7 @@
   "scripts": {
     "generate-schema": "graphql-codegen",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix ."
   },
   "license": "MIT",
   "dependencies": {

@@ -1,7 +1,10 @@
 module.exports = {
     extends: ['airbnb-base', 'airbnb-typescript/base', 'plugin:import/recommended', 'plugin:import/typescript'],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": { "project": "src/lambdas/*/tsconfig.json" },
+    "parserOptions": {
+        "project": "tsconfig.json"
+    },
+    "ignorePatterns": ['.eslintrc.js'],
     "plugins": [
         "@typescript-eslint"
     ],
@@ -15,7 +18,7 @@ module.exports = {
                 // Multiple tsconfigs (Useful for monorepos)
 
                 // use a glob pattern
-                "project": "src/lambdas/*/tsconfig.json",
+                "project": "tsconfig.json",
             }
         }
     },

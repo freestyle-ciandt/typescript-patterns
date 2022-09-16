@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "This lambda is just an example of a query resolver on AppSync",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.92",
+    "typescript-patterns": "file:/../../../"
+  },
   "scripts": {
     "compile": "tsc"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.92",
     "@types/node": "^17.0.13",
     "esbuild": "^0.14.14"
   }
