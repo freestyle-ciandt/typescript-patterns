@@ -73,3 +73,4 @@ Here is the list of tasks to be developed in this repository:
 
 02-09 -> Seguimos com a configuração do EsLint e ainda ficou pra resolver o questão do `object-property-newline`. [piloto: Rômnulo]
 09-09 -> Terminamos a configuração do EsLint. [piloto: Rômulo]
+16-09 -> Fizemos o setup do Jest e tentamos criar o primeiro teste. [piloto: mandolesi]
