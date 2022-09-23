@@ -4,7 +4,8 @@
   "description": "This lambda is just an example of a query resolver on AppSync",
   "license": "MIT",
   "dependencies": {
-    "@types/aws-lambda": "^8.10.92"
+    "@types/aws-lambda": "^8.10.92",
+    "types": "file:../../types"
   },
   "devDependencies": {
     "@types/node": "^17.0.13"

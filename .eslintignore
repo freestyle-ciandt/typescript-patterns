@@ -1,2 +1,4 @@
+.aws-sam/
 .eslintrc.cjs
 node_modules
+src/types/appsync.d.ts

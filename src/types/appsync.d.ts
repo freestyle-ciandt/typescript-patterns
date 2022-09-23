@@ -17,6 +17,7 @@ export type Query = {
   getVehicle?: Maybe<Vehicle>;
 };
 
+
 export type QueryGetVehicleArgs = {
   id: Scalars['String'];
 };
