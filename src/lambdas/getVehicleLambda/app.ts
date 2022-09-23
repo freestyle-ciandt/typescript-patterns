@@ -60,6 +60,7 @@ const handler = async (
   if (vehicle) {
     return vehicle;
   }
+  
   throw new Error('Sorry. Vehicle not found!');
 };
 
