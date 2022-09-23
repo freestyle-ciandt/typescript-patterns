@@ -14,7 +14,7 @@ export default {
   // cacheDirectory: "/private/var/folders/zb/7tnywwyd1hv7dmz745b6w4s1xcz_qv/T/jest_y2q60r",
 
   // Automatically clear mock calls, instances, contexts and results before every test
-  // clearMocks: false,
+  clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
@@ -89,7 +89,7 @@ export default {
   // ],
 
   // An array of file extensions your modules use
-  // moduleFileExtensions: [
+  //moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   //   "js",
   //   "mjs",
   //   "cjs",
@@ -98,7 +98,6 @@ export default {
   //   "tsx",
   //   "json",
   //   "node"
-  // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
