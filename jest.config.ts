@@ -28,16 +28,18 @@ export default {
   ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
-    "/node_modules/",
-    "/__test__/"
+    '.aws-sam',
+    'coverage',
+    '/node_modules/',
+    '/__test__/',
   ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -54,7 +56,7 @@ export default {
       functions: 80,
       lines: 80,
       statements: 80,
-    }
+    },
   },
 
   // A path to a custom dependency extractor
@@ -169,13 +171,13 @@ export default {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "**/*.test.ts?(x)",
+    '**/*.test.ts?(x)',
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   testPathIgnorePatterns: [
-    "/node_modules/",
-    "/.aws-sam/"
+    '/node_modules/',
+    '/.aws-sam/',
   ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
