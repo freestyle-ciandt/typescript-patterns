@@ -65,5 +65,5 @@ test('get Regular Vehicle with success', async () => {
 
   const vehicle = await handler(event);
 
-  expect(vehicle.id).toBe('1');
+  expect(vehicle.id).toBe('2');
 });
