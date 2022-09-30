@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jest"],
     "outDir": "./dist",
     "target": "es2020",
     "strict": true,

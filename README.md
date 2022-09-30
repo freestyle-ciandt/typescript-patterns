@@ -69,3 +69,5 @@ Here is the list of tasks to be developed in this repository:
 * **TASK 4:** [Implement the Factory Pattern](./src/tasks/task4.md)
 * **TASK 5:** [Implement the Builder Pattern](./src/tasks/task5.md)
 
+30/09 - task 2, item 2, segunda bolinha
+
