@@ -43,7 +43,7 @@ test('get Regular Vehicle with success', async () => {
   expect(vehicle.id).toBe('2');
 });
 
-test('get a invalid Vehicle should return an exception', async () => {
+test('get an invalid Vehicle should return an exception', async () => {
   const event = { ...eventMock, arguments: { id: '' } };
 
   await expect(handler(event))
