@@ -44,10 +44,10 @@ sam build --template template.yaml --build-dir .aws-sam/build --beta-features
 sam package --template-file .aws-sam/build/template.yaml --s3-bucket typescript-patterns-dojo-assets --output-template-file .aws-sam/build/packaged-template.yaml
 
 # Create and deploy the CloudFormation stack
-sam deploy --template-file .aws-sam/build/packaged-template.yaml --s3-bucket typescript-patterns-dojo-assets --no-fail-on-empty-changeset --stack-name typescript-patterns-test --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
+sam deploy --template-file .aws-sam/build/packaged-template.yaml --s3-bucket typescript-patterns-dojo-assets --no-fail-on-empty-changeset --stack-name YOUR_STACK_NAME_HERE --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
 ```
 
-> **Note:** Make sure you change the stack name, so it doesn't conflict with the stack of someone else.
+> **Note:** Make sure you change the stack name, so it doesn't conflict with the stack of someone else. Replace `YOUR_STACK_NAME_HERE` with the name of your stack.
 
 ## How to generate the types from your Grahpql schema
 
@@ -65,7 +65,7 @@ Here is the list of tasks to be developed in this repository:
 
 * **TASK 1:** [Configure ESLint](./src/tasks/task1.md)
 * **TASK 2:** [Configure Jest](./src/tasks/task2.md)
-* **TASK 3:** [Configure the Pipeline](./src/tasks/task3.md)
+* **TASK 3:** [Configure the Pipeline (CI/CD)](./src/tasks/task3.md)
 * **TASK 4:** [Implement the Factory Pattern](./src/tasks/task4.md)
 * **TASK 5:** [Implement the Builder Pattern](./src/tasks/task5.md)
 
