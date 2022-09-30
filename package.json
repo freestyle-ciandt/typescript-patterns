@@ -3,14 +3,10 @@
   "version": "1.0.0",
   "description": "This repository contains a basic structure to learn good practices of Typescript, as well as some Design Patterns alongside the AWS SAM framework.",
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.9.1",
-    "@graphql-codegen/typescript": "^2.7.2",
     "eslint-import-resolver-typescript": "^3.4.2",
-    "graphql": "^16.5.0",
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "generate-schema": "graphql-codegen",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },

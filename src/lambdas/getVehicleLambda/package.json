@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/aws-lambda": "^8.10.92",
-    "typescript-patterns": "file:/../../../"
+    "types": "file:../../types"
   },
   "scripts": {
     "compile": "tsc"
