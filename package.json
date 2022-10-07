@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This repository contains a basic structure to learn good practices of Typescript, as well as some Design Patterns alongside the AWS SAM framework.",
   "devDependencies": {
+    "@types/jest": "^29.1.2",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
     "eslint": "^8.22.0",
