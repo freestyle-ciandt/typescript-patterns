@@ -1,3 +1,5 @@
+.aws-sam/
 .eslintrc.cjs
 node_modules
 jest.config.js
+src/types/appsync.d.ts

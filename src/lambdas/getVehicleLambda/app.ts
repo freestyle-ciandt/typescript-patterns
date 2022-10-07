@@ -1,5 +1,5 @@
 import { AppSyncResolverEvent } from 'aws-lambda';
-import { Vehicle, QueryGetVehicleArgs } from 'typescript-patterns/appsync';
+import { Vehicle, QueryGetVehicleArgs } from 'types/appsync';
 
 const REGULAR_VEHICLES: Vehicle[] = [
   {
@@ -33,7 +33,7 @@ const PROMOTIONAL_VEHICLE: Vehicle = {
   available: true,
 };
 
-const isPromotionalVehicle = (id: string): boolean => id == PROMOTIONAL_VEHICLE_ID;
+const isPromotionalVehicle = (id: string): boolean => id === PROMOTIONAL_VEHICLE_ID;
 
 const getPromotionalVehicle = (): Vehicle => PROMOTIONAL_VEHICLE;
 
@@ -43,11 +43,13 @@ const getRegularVehicle = (id: string): Vehicle | null => {
   do {
     if (vehicle.id === id) return vehicle;
     i++;
-  } while (vehicle = REGULAR_VEHICLES[i]);
+  } while ((vehicle = REGULAR_VEHICLES[i]));
   return null;
 };
 
-export const handler = async (event: AppSyncResolverEvent<QueryGetVehicleArgs, Vehicle>): Promise<Vehicle> => {
+export const handler = async (
+  event: AppSyncResolverEvent<QueryGetVehicleArgs, Vehicle>,
+): Promise<Vehicle> => {
   console.log(JSON.stringify(event));
 
   const { id } = event.arguments;
@@ -62,4 +64,8 @@ export const handler = async (event: AppSyncResolverEvent<QueryGetVehicleArgs, V
     return vehicle;
   }
   throw new Error('Sorry. Vehicle not found!');
+};
+
+export default {
+  handler,
 };
