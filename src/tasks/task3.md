@@ -15,7 +15,7 @@ In order to proceed with the tasks, please follow the instructions below:
     * Run the unit tests
 2. Set up the [Git Hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to execute the script created in the previous step **every time someone executes a "git commit"**. As a suggestion, you can use the tool [Husky](https://typicode.github.io/husky/#/).
 3. **(Will be done with the entire team together)** Set up an instance with a Jenkins application.
-    * Install the necessary plugins (GitHub, AWS, SSH Server)
+    * Install the necessary plugins (GitHub Plugin + Pipeline: AWS Steps + SSH Server)
     * Generate a SSH Key and add that to the GitHub repository.
     * Configure the credentials necessary to access the GitHub repository via SSH.
     * Configure the credentials necessary to access the AWS Account.
