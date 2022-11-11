@@ -68,4 +68,5 @@ Here is the list of tasks to be developed in this repository:
 * **TASK 3:** [Configure the Pipeline (CI/CD)](./src/tasks/task3.md)
 * **TASK 4:** [Implement the Factory Pattern](./src/tasks/task4.md)
 * **TASK 5:** [Implement the Builder Pattern](./src/tasks/task5.md)
+* **TASK 5:** [Implement the Singleton Pattern](./src/tasks/task6.md)
 
