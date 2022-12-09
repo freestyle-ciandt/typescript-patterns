@@ -38,13 +38,13 @@ Please follow the instructions below:
   "result": "Invalid route."
 }
 ```
-5. If everything went well, the API should return status code `200` and the following payload in the  response body:
+5. If everything went well, the API should return status code `200` and the following payload in the response body:
 ```json
 {
   "result": "Forwarded successfully."
 }
 ```
-6. If something goes wrong, the API should return status code `500` and the following payload in the  response body:
+6. If something goes wrong, the API should return status code `500` and the following payload in the response body:
 ```json
 {
   "result": "Something went wrong."
