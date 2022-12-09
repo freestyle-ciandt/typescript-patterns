@@ -105,3 +105,6 @@ dist
 
 # AWS SAM
 .aws-sam
+
+# Husky generated files
+.husky/_
