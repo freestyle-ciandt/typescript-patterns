@@ -41,8 +41,10 @@ const getRegularVehicle = (id: string): Vehicle | null => {
   let i = 0;
   let vehicle = REGULAR_VEHICLES[i];
   do {
-    if (vehicle.id === id) return vehicle;
     i++;
+    if (vehicle.id === id) {
+      return vehicle;
+    }
   } while ((vehicle = REGULAR_VEHICLES[i]));
   return null;
 };
