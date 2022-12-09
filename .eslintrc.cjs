@@ -1,9 +1,13 @@
 module.exports = {
-  extends: ['airbnb-typescript/base', 'airbnb-base'],
+  extends: [
+    'airbnb-base',
+    'airbnb-typescript/base',
+  ],
   parser: '@typescript-eslint/parser',
   plugins: ['import'],
   root: true,
   env: {
+    node: true,
     es2021: true,
     jest: true
   },
@@ -21,7 +25,20 @@ module.exports = {
         alwaysTryTypes: true,
         paths: './tsconfig.json',
       },
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
     },
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ]
   },
   rules: {
     "no-cond-assign": ["error", "except-parens"],

@@ -1,10 +1,10 @@
 import { AppSyncResolverEvent } from 'aws-lambda';
 import { QueryGetVehicleArgs, Vehicle } from 'types/appsync';
-import { handler } from '../app'
+import { handler } from '../app';
 
 describe('Testing handler Jets', () => {
   test('primeiro teste', async () => {
-    //AWS type 
+    // AWS type
     const event: AppSyncResolverEvent<QueryGetVehicleArgs, Vehicle> = {
       arguments: {
         id: '1',
@@ -42,7 +42,7 @@ describe('Testing handler Jets', () => {
   });
 
   test('getRegularVehicle', async () => {
-    //AWS type 
+    // AWS type
     const event: AppSyncResolverEvent<QueryGetVehicleArgs, Vehicle> = {
       arguments: {
         id: '3',
@@ -80,7 +80,7 @@ describe('Testing handler Jets', () => {
   });
 
   test('getRegularVehicle: should return null', async () => {
-    //AWS type 
+    // AWS type
     const event: AppSyncResolverEvent<QueryGetVehicleArgs, Vehicle> = {
       arguments: {
         id: '5',
