@@ -9,3 +9,12 @@ type Vehicle {
   publishedAt: Int!
   available: Boolean!
 }
+
+type Mutation {
+  defaultMessage(route: String!, message: String!): MessageData
+}
+
+type MessageData{
+  route: String!
+  message: String!
+}

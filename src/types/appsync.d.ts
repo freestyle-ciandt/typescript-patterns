@@ -12,6 +12,23 @@ export type Scalars = {
   Float: number;
 };
 
+export type MessageData = {
+  __typename?: 'MessageData';
+  message: Scalars['String'];
+  route: Scalars['String'];
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  defaultMessage?: Maybe<MessageData>;
+};
+
+
+export type MutationDefaultMessageArgs = {
+  message: Scalars['String'];
+  route: Scalars['String'];
+};
+
 export type Query = {
   __typename?: 'Query';
   getVehicle?: Maybe<Vehicle>;

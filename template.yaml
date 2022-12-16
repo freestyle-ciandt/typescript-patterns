@@ -16,6 +16,11 @@ Resources:
     Properties:
       CodeUri: src/lambdas/getVehicleLambda
       Handler: app.handler
+  DesingPatternLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/lambdas/desingPattern
+      Handler: app.handler
 
   AWSAppSyncServiceRole:
       Type: AWS::IAM::Role
@@ -58,6 +63,7 @@ Resources:
               - 'lambda:invokeFunction'
             Resource:
               - !GetAtt GetVehicleLambda.Arn
+              - !GetAtt DesingPatternLambda.Arn
       Roles:
         - Ref: AWSAppSyncServiceRole
 
@@ -105,6 +111,27 @@ Resources:
       DataSourceName: !GetAtt GetVehicleLambdaDataSource.Name
       RequestMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicle.req.vtl
       ResponseMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicle.res.vtl
+    DependsOn: TypescriptAPISchema
+  
+  DesingPatternLambdaDataSource:
+    Type: AWS::AppSync::DataSource
+    Properties:
+      ApiId: !GetAtt TypescriptAPI.ApiId
+      Name: DesingPatternLambda
+      Type: AWS_LAMBDA
+      ServiceRoleArn: !GetAtt AWSAppSyncServiceRole.Arn
+      LambdaConfig:
+        LambdaFunctionArn: !GetAtt DesingPatternLambda.Arn
+
+  DesingPatternResolver:
+    Type: AWS::AppSync::Resolver
+    Properties:
+      ApiId: !GetAtt TypescriptAPI.ApiId
+      TypeName: Mutation
+      FieldName: desingPattern
+      DataSourceName: !GetAtt DesingPatternLambdaDataSource.Name
+      RequestMappingTemplateS3Location: ./src/appsync/mappings/Query.mutation.req.vtl
+      ResponseMappingTemplateS3Location: ./src/appsync/mappings/Query.mutation.res.vtl
     DependsOn: TypescriptAPISchema
 
 Outputs:
