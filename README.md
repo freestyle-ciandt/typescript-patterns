@@ -44,7 +44,7 @@ sam build --template template.yaml --build-dir .aws-sam/build --beta-features
 sam package --template-file .aws-sam/build/template.yaml --s3-bucket typescript-patterns-dojo-assets --output-template-file .aws-sam/build/packaged-template.yaml
 
 # Create and deploy the CloudFormation stack
-sam deploy --template-file .aws-sam/build/packaged-template.yaml --s3-bucket typescript-patterns-dojo-assets --no-fail-on-empty-changeset --stack-name YOUR_STACK_NAME_HERE --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
+sam deploy --template-file .aws-sam/build/packaged-template.yaml --s3-bucket typescript-patterns-dojo-assets --no-fail-on-empty-changeset --stack-name cabulosos-ts --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
 ```
 
 > **Note:** Make sure you change the stack name, so it doesn't conflict with the stack of someone else. Replace `YOUR_STACK_NAME_HERE` with the name of your stack.
@@ -71,4 +71,5 @@ Here is the list of tasks to be developed in this repository:
 * **TASK 5:** [Implement the Singleton Pattern](./src/tasks/task6.md)
 
 30/09 - task 2, item 2, segunda bolinha
+16/12 - task 4: we need to put all lambdas in the same `package.json`
 
