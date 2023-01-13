@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/aws-lambda": "^8.10.92",
+    "esbuild": "^0.16.17",
     "types": "file:../../types"
   },
   "devDependencies": {
