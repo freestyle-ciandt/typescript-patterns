@@ -11,7 +11,7 @@ type Vehicle {
 }
 
 type Mutation {
-  defaultMessage(route: String!, message: String!): MessageData
+  desingPattern(route: String!, message: String!): MessageData
 }
 
 type MessageData{

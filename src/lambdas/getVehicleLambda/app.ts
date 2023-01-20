@@ -1,5 +1,5 @@
 import { AppSyncResolverEvent } from 'aws-lambda';
-import { Vehicle, QueryGetVehicleArgs } from 'types/appsync';
+import { Vehicle, QueryGetVehicleArgs } from '../../types/appsync';
 
 const REGULAR_VEHICLES: Vehicle[] = [
   {

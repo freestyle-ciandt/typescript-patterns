@@ -14,13 +14,14 @@ Resources:
   GetVehicleLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/lambdas/getVehicleLambda
-      Handler: app.handler
+      CodeUri: dist/
+      Handler: getVehicleLambda/app.handler
+
   DesingPatternLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/lambdas/desingPattern
-      Handler: app.handler
+      CodeUri: dist/
+      Handler: desingPattern/app.handler
 
   AWSAppSyncServiceRole:
       Type: AWS::IAM::Role

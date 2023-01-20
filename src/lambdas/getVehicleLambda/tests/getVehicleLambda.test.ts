@@ -1,5 +1,5 @@
 import { AppSyncResolverEvent } from 'aws-lambda';
-import { QueryGetVehicleArgs, Vehicle } from 'types/appsync';
+import { QueryGetVehicleArgs, Vehicle } from '../../../types/appsync';
 import { handler } from '../app';
 
 describe('Testing handler Jets', () => {
@@ -18,6 +18,7 @@ describe('Testing handler Jets', () => {
         seats: 0,
       },
       request: {
+        domainName: '',
         headers: {},
       },
       info: {
@@ -56,6 +57,7 @@ describe('Testing handler Jets', () => {
         seats: 0,
       },
       request: {
+        domainName: '',
         headers: {},
       },
       info: {
@@ -94,6 +96,7 @@ describe('Testing handler Jets', () => {
         seats: 0,
       },
       request: {
+        domainName: '',
         headers: {},
       },
       info: {
@@ -129,6 +132,7 @@ describe('Testing handler Jets', () => {
         seats: 0,
       },
       request: {
+        domainName: '',
         headers: {},
       },
       info: {
