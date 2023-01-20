@@ -2,10 +2,20 @@ type Query {
   getVehicle(id: String!): Vehicle
 }
 
+type Mutation {
+  forwardMessage(route: String!, message: String!): 
+}
+
 type Vehicle {
   id: String!
   category: String!
   seats: Int!
   publishedAt: Int!
   available: Boolean!
+}
+
+type MessageResponse {
+  id: String
+  lastUpdated: Int
+  message: String
 }

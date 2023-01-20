@@ -1,0 +1,2 @@
+export const AWS_REGION_CONFIG = 'AWS_REGION';
+export const LAMBDA_RESOURCE_NAME = 'LAMBDA_NAME';
