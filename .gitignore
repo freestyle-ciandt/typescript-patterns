@@ -108,3 +108,6 @@ dist
 
 # Husky generated files
 .husky/_
+
+# Typescript generated files
+dist

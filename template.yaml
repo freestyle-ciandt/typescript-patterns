@@ -14,14 +14,30 @@ Resources:
   GetVehicleLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: dist/
-      Handler: getVehicleLambda/app.handler
+      CodeUri: ./
+      Handler: src/lambdas/getVehicleLambda/app.handler
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints:
+          - src/lambdas/getVehicleLambda/app.ts
 
-  DesingPatternLambda:
+  DesignPatternLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: dist/
-      Handler: desingPattern/app.handler
+      CodeUri: ./
+      Handler: src/lambdas/designPattern/app.handler
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints:
+          - src/lambdas/designPattern/app.ts
 
   AWSAppSyncServiceRole:
       Type: AWS::IAM::Role
@@ -64,7 +80,7 @@ Resources:
               - 'lambda:invokeFunction'
             Resource:
               - !GetAtt GetVehicleLambda.Arn
-              - !GetAtt DesingPatternLambda.Arn
+              - !GetAtt DesignPatternLambda.Arn
       Roles:
         - Ref: AWSAppSyncServiceRole
 
@@ -114,23 +130,23 @@ Resources:
       ResponseMappingTemplateS3Location: ./src/appsync/mappings/Query.getVehicle.res.vtl
     DependsOn: TypescriptAPISchema
   
-  DesingPatternLambdaDataSource:
+  DesignPatternLambdaDataSource:
     Type: AWS::AppSync::DataSource
     Properties:
       ApiId: !GetAtt TypescriptAPI.ApiId
-      Name: DesingPatternLambda
+      Name: DesignPatternLambda
       Type: AWS_LAMBDA
       ServiceRoleArn: !GetAtt AWSAppSyncServiceRole.Arn
       LambdaConfig:
-        LambdaFunctionArn: !GetAtt DesingPatternLambda.Arn
+        LambdaFunctionArn: !GetAtt DesignPatternLambda.Arn
 
-  DesingPatternResolver:
+  DesignPatternResolver:
     Type: AWS::AppSync::Resolver
     Properties:
       ApiId: !GetAtt TypescriptAPI.ApiId
       TypeName: Mutation
-      FieldName: desingPattern
-      DataSourceName: !GetAtt DesingPatternLambdaDataSource.Name
+      FieldName: designPattern
+      DataSourceName: !GetAtt DesignPatternLambdaDataSource.Name
       RequestMappingTemplateS3Location: ./src/appsync/mappings/Query.mutation.req.vtl
       ResponseMappingTemplateS3Location: ./src/appsync/mappings/Query.mutation.res.vtl
     DependsOn: TypescriptAPISchema

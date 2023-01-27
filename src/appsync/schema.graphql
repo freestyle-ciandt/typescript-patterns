@@ -11,7 +11,7 @@ type Vehicle {
 }
 
 type Mutation {
-  desingPattern(route: String!, message: String!): MessageData
+  designPattern(route: String!, message: String!): MessageData
 }
 
 type MessageData{

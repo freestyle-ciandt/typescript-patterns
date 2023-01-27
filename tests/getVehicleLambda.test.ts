@@ -1,6 +1,6 @@
 import { AppSyncResolverEvent } from 'aws-lambda';
-import { QueryGetVehicleArgs, Vehicle } from '../../../types/appsync';
-import { handler } from '../app';
+import { QueryGetVehicleArgs, Vehicle } from '../src/types/appsync';
+import { handler } from '../src/lambdas/getVehicleLambda/app';
 
 describe('Testing handler Jets', () => {
   test('primeiro teste', async () => {
