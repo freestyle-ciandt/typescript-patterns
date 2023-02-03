@@ -26,12 +26,16 @@
   },
   "scripts": {
     "compile": "rm -rf dist && tsc",
+    "deploy": "npm run sam:build && npm run sam:package && npm run sam:deploy",
     "generate-schema": "cd src/types/ && graphql-codegen",
     "quality": "npm audit && npm run lint && npm test",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
+    "sam:build": "sam build --template template.yaml --build-dir .aws-sam/build --beta-features",
+    "sam:package": "sam package --template-file .aws-sam/build/template.yaml --s3-bucket typescript-patterns-dojo-assets --output-template-file .aws-sam/build/packaged-template.yaml",
+    "sam:deploy": "sam deploy --template-file .aws-sam/build/packaged-template.yaml --s3-bucket typescript-patterns-dojo-assets --no-fail-on-empty-changeset --stack-name cabulosos-ts --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM",
     "test": "jest",
-    "prepare": "husky install || echo 'Skipping for now...'"
+    "prepare": "husky install"
   },
   "license": "MIT"
 }
